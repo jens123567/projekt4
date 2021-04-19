@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-size: 32px;
+  display: flex;
+}
+
+#headerDiv2 {
+  font-size: large;
+  justify-self: flex-end;
+}
+
+.scrollMenu {
+  display: flex;
+  overflow: auto;
+}
+
+.timeElement {
+  padding: 12px;
+  margin: 10px;
+}
