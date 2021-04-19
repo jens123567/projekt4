@@ -7,11 +7,15 @@
 header {
   font-size: 32px;
   display: flex;
+  flex-direction: row;
 }
 
 #headerDiv2 {
   font-size: large;
-  justify-self: flex-end;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .scrollMenu {
@@ -22,4 +26,9 @@ header {
 .timeElement {
   padding: 12px;
   margin: 10px;
+}
+
+#forecast {
+  display: flex;
+  flex-direction: column;
 }

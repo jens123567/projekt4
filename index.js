@@ -36,8 +36,9 @@ fetch(
     }
     let sunriseSunset = hourlyTemp3Day[0].astro;
     let sunrise = sunriseSunset.sunrise.split(" ");
-    let sunset = sunriseSunset.sunset.split(" ");
+    let sunset = sunriseSunset.sunset.split(" ")[0].split(":");
+    sunset = parseInt(sunset[0]) + 12 + ":" + sunset[1];
 
     document.querySelector("#sunrise").innerText = "Sunrise: " + sunrise[0];
-    document.querySelector("#sunset").innerText = "Sunset " + sunset[0];
+    document.querySelector("#sunset").innerText = "Sunset " + sunset;
   });
