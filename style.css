@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 6px;
+}
+
 header {
   font-size: 32px;
   display: flex;
@@ -31,4 +40,21 @@ header {
 #forecast {
   display: flex;
   flex-direction: column;
+}
+
+.forecastContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.forecastTemp {
+  width: 50%;
+  justify-content: flex-end;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.forecastDate {
+  width: 50%;
 }
