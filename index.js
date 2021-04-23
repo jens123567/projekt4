@@ -1,13 +1,9 @@
-let weathercode;
-
 fetch(
   "https://api.weatherapi.com/v1/forecast.json?key=07dd09ee78f34997b5664221211904&q=Stockholm&days=7&aqi=no&alerts=no"
 )
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-
-    weathercode = data.current.condition.code;
 
     document.querySelector("#city").innerText = data.location.name;
     document.querySelector("#temprature").innerText =
@@ -56,7 +52,7 @@ fetch(
       let div2 = document.createElement("div");
       div2.className = "forecastTemp";
       div2.innerHTML = `
-      <div>${hourlyTemp3Day[i].day.maxtemp_c} - </div>
+      <div id="maxTemp">${hourlyTemp3Day[i].day.maxtemp_c}  </div>
       <div>${hourlyTemp3Day[i].day.mintemp_c}</div>
       `;
 
@@ -69,9 +65,8 @@ fetch(
     console.error(error);
   });
 
-console.log(weathercode);
 // Ändra bakgrunden baserat på väder
-fetch("./weather_conditions.json", {})
+/*fetch("./weather_conditions.json", {})
   .then((response) => {
     return response.json();
   })
@@ -81,3 +76,4 @@ fetch("./weather_conditions.json", {})
   .catch((error) => {
     console.error(error);
   });
+*/

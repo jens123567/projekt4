@@ -2,10 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
   height: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -14,9 +24,18 @@
 }
 
 header {
-  font-size: 32px;
+  font-size: 46px;
   display: flex;
   flex-direction: row;
+  padding: 22px;
+
+  background-color: #a6ddff;
+}
+
+main {
+  margin-top: -2px;
+  background-image: linear-gradient(#a6ddff, #4abaff);
+  height: 100%;
 }
 
 #headerDiv2 {
@@ -30,16 +49,20 @@ header {
 .scrollMenu {
   display: flex;
   overflow: auto;
+
+  font-size: 20px;
 }
 
 .timeElement {
   padding: 12px;
-  margin: 10px;
+  margin: 12px 6px;
 }
 
 #forecast {
   display: flex;
   flex-direction: column;
+
+  padding: 22px;
 }
 
 .forecastContainer {
@@ -57,4 +80,30 @@ header {
 
 .forecastDate {
   width: 50%;
+}
+
+#maxTemp {
+  margin-right: 6px;
+}
+
+/*#fillerDiv {
+  height: 100%;
+}
+*/
+footer {
+  padding: 12px;
+  margin-top: -2px;
+
+  background-color: #4abaff;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+
+  #headerDiv2 {
+    padding-top: 12px;
+    align-items: flex-start;
+  }
 }
