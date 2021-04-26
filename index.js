@@ -61,9 +61,7 @@ fetch(
       document.querySelector("#forecast").appendChild(container);
     }
   })
-  .catch((error) => {
-    console.error(error);
-  });
+  .catch(console.error);
 
 // Ändra bakgrunden baserat på väder
 /*fetch("./weather_conditions.json", {})
@@ -77,3 +75,11 @@ fetch(
     console.error(error);
   });
 */
+
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    e.preventDefault();
+  },
+  false
+);
