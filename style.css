@@ -9,16 +9,10 @@ html {
   height: 100%;
 }
 
-html,
 body {
   height: 100%;
-  width: 100%;
-  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
-
-/*body {
-  height: 100%;
-}*/
 
 ::-webkit-scrollbar {
   height: 6px;
