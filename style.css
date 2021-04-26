@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  -webkit-overflow-scrolling: touch;
+  background-image: linear-gradient(#a6ddff, #4abaff);
 }
 
 ::-webkit-scrollbar {
