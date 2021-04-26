@@ -12,6 +12,7 @@ html {
 
 body {
   height: 100%;
+  background-image: linear-gradient(#a6ddff, #4abaff);
 }
 
 ::-webkit-scrollbar {
