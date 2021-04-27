@@ -17,7 +17,6 @@ fetch(
       // skapar huvud elementet
       let element = document.createElement("div");
       element.classList.add("timeElement");
-
       let time = hourlyTemp[i].time.split(" ");
 
       element.innerHTML = `
@@ -62,24 +61,3 @@ fetch(
     }
   })
   .catch(console.error);
-
-// Ändra bakgrunden baserat på väder
-/*fetch("./weather_conditions.json", {})
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-*/
-
-document.addEventListener(
-  "touchmove",
-  function (e) {
-    e.preventDefault();
-  },
-  false
-);
