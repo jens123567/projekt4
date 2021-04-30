@@ -51,6 +51,7 @@ main {
 .scrollMenu {
   display: flex;
   overflow: auto;
+  align-items: flex-end;
 
   font-size: 20px;
 }
@@ -58,6 +59,12 @@ main {
 .timeElement {
   padding: 12px;
   margin: 12px 6px;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 6px;
+  background-color: #c5e9ff;
 }
 
 #forecast {

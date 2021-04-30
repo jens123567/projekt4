@@ -9,24 +9,35 @@ fetch(
     document.querySelector("#temprature").innerText =
       data.current.temp_c + "°C";
 
+    // vädret för tre dagar
     let hourlyTemp3Day = data.forecast.forecastday;
 
+    // vädret för dagen timme för timme
     let hourlyTemp = hourlyTemp3Day[0].hour;
 
+    // skapar timmprognosen
     for (let i = 0; i < hourlyTemp.length; i++) {
       // skapar huvud elementet
       let element = document.createElement("div");
+      let graphHeigt = 80 + 5 * hourlyTemp[i].temp_c;
+      console.log(graphHeigt);
+      element.style.height = graphHeigt + "px";
       element.classList.add("timeElement");
       let time = hourlyTemp[i].time.split(" ");
 
-      element.innerHTML = `
+      let element2 = document.createElement("div");
+
+      // skapar diven för tid och temperatur
+      element2.innerHTML = `
         <div>${time[1]}</div>
         <div>${hourlyTemp[i].temp_c}°C</div>
       `;
+      element.appendChild(element2);
 
       // sätter elementen där de ska vara
       document.querySelector(".scrollMenu").appendChild(element);
     }
+
     // Hämtar sol upp och ned
     let sunriseSunset = hourlyTemp3Day[0].astro;
     let sunrise = sunriseSunset.sunrise.split(" ");
@@ -34,9 +45,10 @@ fetch(
     sunset = parseInt(sunset[0]) + 12 + ":" + sunset[1];
 
     //placerar sol upp och ned
-    document.querySelector("#sunrise").innerText = "Sunrise: " + sunrise[0];
+    document.getElementById("sunrise").innerText = "Sunrise: " + sunrise[0];
     document.querySelector("#sunset").innerText = "Sunset " + sunset;
 
+    // skapar element för prognosen
     for (let i = 0; i < hourlyTemp3Day.length; i++) {
       let container = document.createElement("div");
       container.className = "forecastContainer";
