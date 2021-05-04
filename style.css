@@ -5,14 +5,15 @@
 
   font-family: "Open Sans", sans-serif;
 }
+
 html {
-  height: 100%;
-  background-image: linear-gradient(#a6ddff, #4abaff);
+  min-height: 100vh;
 }
 
 body {
-  height: 100%;
-  background-image: linear-gradient(#a6ddff, #4abaff);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 ::-webkit-scrollbar {
@@ -49,6 +50,7 @@ main {
 }
 
 .scrollMenu {
+  max-width: 100vw;
   display: flex;
   overflow: auto;
   align-items: flex-end;
@@ -95,10 +97,6 @@ main {
   margin-right: 6px;
 }
 
-/*#fillerDiv {
-  height: 100%;
-}
-*/
 footer {
   padding: 12px;
   margin-top: -2px;

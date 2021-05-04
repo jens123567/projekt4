@@ -5,7 +5,9 @@ fetch(
   .then((data) => {
     console.log(data);
 
+    // namn på staden (stockholm)
     document.querySelector("#city").innerText = data.location.name;
+    // temperaturen just nu
     document.querySelector("#temprature").innerText =
       data.current.temp_c + "°C";
 
@@ -19,13 +21,14 @@ fetch(
     for (let i = 0; i < hourlyTemp.length; i++) {
       // skapar huvud elementet
       let element = document.createElement("div");
+      // skapar höjd på elementen beroende på temperatur den timmen
       let graphHeigt = 80 + 5 * hourlyTemp[i].temp_c;
-      console.log(graphHeigt);
       element.style.height = graphHeigt + "px";
       element.classList.add("timeElement");
-      let time = hourlyTemp[i].time.split(" ");
 
+      // skapar div för informationen temp och timme
       let element2 = document.createElement("div");
+      let time = hourlyTemp[i].time.split(" ");
 
       // skapar diven för tid och temperatur
       element2.innerHTML = `
@@ -53,6 +56,7 @@ fetch(
       let container = document.createElement("div");
       container.className = "forecastContainer";
 
+      // div för datumet som prognosen visas
       let div = document.createElement("div");
       div.className = "forecastDate";
       div.innerHTML = `
@@ -60,6 +64,7 @@ fetch(
       `;
       container.appendChild(div);
 
+      // max och min temperatur
       let div2 = document.createElement("div");
       div2.className = "forecastTemp";
       div2.innerHTML = `
