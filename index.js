@@ -22,7 +22,7 @@ fetch(
       // skapar huvud elementet
       let element = document.createElement("div");
       // skapar höjd på elementen beroende på temperatur den timmen
-      let graphHeigt = 80 + 5 * hourlyTemp[i].temp_c;
+      let graphHeigt = 80 + 10 * hourlyTemp[i].temp_c;
       element.style.height = graphHeigt + "px";
       element.classList.add("timeElement");
 
